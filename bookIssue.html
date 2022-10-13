@@ -36,48 +36,76 @@
         </div>
     </nav>
 
-    <div id="homemessage"></div>
+    <div id="message"></div>
 
 
     <div class="container my-3">
-        <h1>Books</h1>
-            <button type="button" class="btn btn-outline-primary"><a href="addBooks.html" style="text-decoration: none;">Add Books</a></button>
-            <button type="button" class="btn btn-outline-primary"><a href="bookIssue.html" style="text-decoration: none;">Issue Books</a></button>
-        
-       
+        <h1>Issuing</h1>
         <hr>
-        
+        <form id="libraryForm">
+            <div class="form-group row">
+                <label for="bookName" class="col-sm-2 col-form-label">Book Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bookName" placeholder="Book Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="author" placeholder="Author">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="price" class="col-sm-2 col-form-label">Issued to </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="student" placeholder="Student Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="price" class="col-sm-2 col-form-label">Enrollment No</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="enroll" placeholder="Enrollment No">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="price" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="issued">
+                </div>
+            </div>
+            
+            
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
 
         <div id="table">
-           
+            <h1>Records</h1>
 
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Book Name</th>
                         <th scope="col">Author</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Issued to</th>
+                        <th scope="col">Enrollment No</th>
+                        <th scope="col">Issued on</th>
                     </tr>
                 </thead>
-                <tbody id="hometableBody">
-                   <tr>
-                    <td>ishwar</td>
-                    <td>ishwar</td>
-                    <td>ishwar</td>
-                   </tr>
-                   <tr>
-                    <td>ishwar</td>
-                    <td>ishwar</td>
-                    <td>ishwar</td>
-                   </tr>
+                <tbody id="tableBody">
+                   
                 </tbody>
-                <tbody id='hometableBody'></tbody>
+                <tbody id='tableBody'></tbody>
             </table>
         </div>
     </div>
-   
 
-    <script src=""></script>
+
+    <script src="app/books.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="index.js"></script> -->
