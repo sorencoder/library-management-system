@@ -1,12 +1,12 @@
 
 
 // Constructor
-function Book(bookName, author, studentName,enrollNo,date) {
+function Book(bookName, author, studentName, enrollNo, date) {
     this.bookName = bookName;
     this.author = author;
     this.studentName = studentName;
     this.enrollNo = enrollNo;
-    this.date=date;
+    this.date = date;
 }
 
 // Display Constructor
@@ -42,9 +42,9 @@ Display.prototype.clear = function () {
 
 // Implement the validate function
 Display.prototype.validate = function (book) {
-    if (book.bookName.length < 2 || book.author.length < 2 || book.studentName <2
-        ||book.enrollNo <2|| book.date == '' 
-        ) {
+    if (book.bookName.length < 2 || book.author.length < 2 || book.studentName < 2
+        || book.enrollNo < 2 || book.date == ''
+    ) {
         return false
     }
     else {
@@ -80,23 +80,23 @@ function libraryFormSubmit(e) {
     let date = document.getElementById('issued').value;
 
 
-    let book = new Book(bookName, author, studentName,enrollNo,date);
+    let book = new Book(bookName, author, studentName, enrollNo, date);
     console.log(book);
 
     let display = new Display();
-    
-  
-    
-    if(display.validate(book)){
+
+
+
+    if (display.validate(book)) {
         display.add(book);
         display.clear();
-        display.show('success','book issued successfully');
+        display.show('success', 'book issued successfully');
     }
-    else{
+    else {
         //show error to the user
-        display.show('error','please fill all the fields');
+        display.show('error', 'please fill all the fields');
     }
-    
 
-    
+
+
 }
