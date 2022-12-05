@@ -1,23 +1,23 @@
 const mongoose = require('mongoose');
 const bookSchema = mongoose.Schema(
     {
-        id:{
-            type:String,
+        id: {
+            type: String,
             unique: true,
             required: true
         },
-        bookname:{
+        bookname: {
             type: String,
             required: true
         },
-        author:{
+        author: {
             type: String,
             required: true
         },
-        dateadded:{
+        dateadded: {
             type: Date,
             default: Date.now()
         }
     }
 );
-module.exports = mongoose.model("books",bookSchema);
+module.exports = mongoose.model("books", bookSchema);
